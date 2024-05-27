@@ -20,6 +20,7 @@ import TransportationResult from './TransportationResult';
 import ManufacturingResult from './ManufacturingResult';
 import classes from './style.module.css';
 import Map from './Map';
+import BigData from './BigData';
 
 const ResultPageDetail = () => {
   const iconStyle = { width: rem(12), height: rem(12) };
@@ -164,6 +165,11 @@ const ResultPageDetail = () => {
           <Tabs.Tab value="map" leftSection={<IconChartBar style={iconStyle} />}>
             Map
           </Tabs.Tab>
+
+          <Tabs.Tab value="bigdata" leftSection={<IconChartBar style={iconStyle} />}>
+              Big Data
+          </Tabs.Tab>
+
         </Tabs.List>
 
         <Tabs.Panel value="transportation">
@@ -194,6 +200,10 @@ const ResultPageDetail = () => {
 
         <Tabs.Panel value="map">
           <Map />
+        </Tabs.Panel>
+
+        <Tabs.Panel value="bigdata">
+          <BigData />
         </Tabs.Panel>
       </Tabs>
     </Container>
